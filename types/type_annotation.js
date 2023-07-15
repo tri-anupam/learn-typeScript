@@ -60,5 +60,16 @@
 //? It is a built-in type that allows you to work with numbers that are larger than the range supported by the regular number type. 
 //? BigInt literals are written by appending the n suffix to an integer literal. 
 //? In JS we can't read the whole numbers beyond 2 raise to power 53.
-var bigNumber = 99999999999999999999999n;
-console.log(bigNumber);
+// let bigNumber:bigint = 99999999999999999999999n;
+// console.log(bigNumber)
+//* Any Type
+//?The any type is the most flexible type in Typecript. It essentially turns of all type checking for the variable or expressions it is applied to.
+var data = "hello world"; //! string type
+console.log(data);
+data = 123; //! number type
+console.log(data);
+data = true; //! boolen type
+console.log(data);
+//! useCase
+//? Working with Dynamic Data: When dealing with data from dynamic source like user inputs, network response, or deserialized JSON objects, the any type can be useful.
+//?Migration from JavaScript: When migrating an existing javaScript to typeScript, using the "any type" can be convenient way to quick
