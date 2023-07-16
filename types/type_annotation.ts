@@ -89,14 +89,43 @@
 //* Any Type
 //?The any type is the most flexible type in Typecript. It essentially turns of all type checking for the variable or expressions it is applied to.
 
-let data:any = "hello world" //! string type
-console.log(data)
-data = 123;              //! number type
-console.log(data)
-data = true;            //! boolen type
-console.log(data)
+// let data:any = "hello world" //! string type
+// console.log(data)
+// data = 123;              //! number type
+// console.log(data)
+// data = true;            //! boolen type
+// console.log(data)
 
 //! useCase
 //? Working with Dynamic Data: When dealing with data from dynamic source like user inputs, network response, or deserialized JSON objects, the any type can be useful.
 
-//?Migration from JavaScript: When migrating an existing javaScript to typeScript, using the "any type" can be convenient way to quick
+//?Migration from JavaScript: When migrating an existing javaScript to typeScript, using the "any type" can be convenient way to quickly annoate variable and fucntions without immediately specifying their precise type.
+
+
+//* Unknown Type
+//? The unknown type is safer alternative to any because it still enforces type checking and type safety.
+//? Variables of type unknown can hold values of any type, but you most perform type checks or type assertions before using them in specific ways.
+
+// let myNum:unknown = 5;
+// myNum = "hello";
+
+
+//* Type Inference
+//? Type inference in TypeScript refers to the ability of the TypeScript compiler to automatically determine and assign types variables, expression, and function return values based on their usage and context in the code.
+
+const myName = "anupam";  //* The compiler infers the type string for the variable myName.
+
+//! What are the some best practices for using type inference in TypeScript?
+//? Use type inference for simple case where the assigned value clearly indicates the intended type.
+//? When in doubt, provide explicit type annotations to amek your intentions clear.
+//? Avoid relying too heavily on type interence when the assigned value is complex or ambiguous. 
+//? Regularly review and refactor your code to ensure the inferred types aligh with your intentions.
+
+//todo
+let message = "Hello, TypeScript!"
+//* The compiler infers the type string for the variable message.
+console.log(message)
+let areaOfRectangle = (l:number,b:number)=>{return l*b}
+
+console.log(areaOfRectangle(2,3))
+
